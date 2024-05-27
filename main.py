@@ -1,8 +1,11 @@
 import requests
 from send_email import send_email
 from datetime import datetime
+from dotenv import load_dotenv
+from os import getenv
 
-api_key = '22814014830945708becbca6300ee90e'
+load_dotenv()
+api_key = getenv("NEWS")
 query = 'tesla'
 from_date = '2024-05-26'
 to_date = datetime.today().strftime("%Y-%m-%d")
